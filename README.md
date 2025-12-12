@@ -46,7 +46,7 @@ PosturoAnalyzer es una herramienta clínica avanzada diseñada para analizar dat
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/italocamposmontenegro-debug/fallrisk-lab.git
+git clone https://github.com/elcosmonauta/fallrisk-lab.git
 
 # Navegar al directorio
 cd fallrisk-lab

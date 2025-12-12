@@ -5,10 +5,10 @@
   "type": "module",
   "description": "Aplicación web profesional para análisis de posturografía y evaluación del riesgo de caídas",
   "author": "Universidad Viña del Mar - Programa de Kinesiología",
-  "homepage": "https://italocamposmontenegro-debug.github.io/fallrisk-lab",
+  "homepage": "https://elcosmonauta.github.io/fallrisk-lab",
   "repository": {
     "type": "git",
-    "url": "https://github.com/italocamposmontenegro-debug/fallrisk-lab.git"
+    "url": "https://github.com/elcosmonauta/fallrisk-lab.git"
   },
   "scripts": {
     "dev": "vite",
