@@ -69,6 +69,64 @@ npm run preview  # Previsualiza la build de producción
 npm run lint     # Ejecuta el linter
 ```
 
+## 🚀 Deployment en GitHub Pages
+
+Esta aplicación está configurada para desplegarse automáticamente en GitHub Pages usando GitHub Actions.
+
+### Configuración Automática
+
+El proyecto incluye:
+
+1. **Workflow de GitHub Actions** (`.github/workflows/deploy.yml`):
+   - Se ejecuta automáticamente en cada push a `main`
+   - Instala dependencias con `npm ci`
+   - Construye la aplicación con `npm run build`
+   - Despliega la carpeta `dist/` a GitHub Pages
+
+2. **Configuración de Vite** (`vite.config.js`):
+   ```javascript
+   base: '/fallrisk-lab/'
+   ```
+   Esta configuración es **esencial** para que los assets carguen correctamente en GitHub Pages, ya que el sitio vive en `/<nombre-repo>/` y no en la raíz del dominio.
+
+### Pasos para Habilitar GitHub Pages
+
+1. Ve a **Settings** → **Pages** en tu repositorio de GitHub
+2. En **Source**, selecciona **"GitHub Actions"**
+3. El deployment se ejecutará automáticamente en el próximo push
+
+### URL de Producción
+
+La aplicación está disponible en:
+**https://elcosmonauta.github.io/fallrisk-lab/**
+
+### Actualizaciones
+
+Cada vez que hagas push a la rama `main`, el sitio se actualizará automáticamente en 1-2 minutos.
+
+```bash
+git add .
+git commit -m "Tu mensaje de commit"
+git push
+```
+
+### Verificar el Deployment
+
+- **Estado del workflow**: https://github.com/elcosmonauta/fallrisk-lab/actions
+- **Configuración de Pages**: https://github.com/elcosmonauta/fallrisk-lab/settings/pages
+
+### Solución de Problemas
+
+**Pantalla en blanco o error 404 de assets:**
+- Verifica que `vite.config.js` tenga `base: '/fallrisk-lab/'`
+- Asegúrate de que el workflow se haya ejecutado exitosamente
+
+**El workflow falla:**
+- Revisa los logs en la pestaña Actions
+- Verifica que todas las dependencias estén en `package.json`
+- Asegúrate de que el código compile localmente con `npm run build`
+
+
 ## 🏗️ Estructura del Proyecto
 
 ```

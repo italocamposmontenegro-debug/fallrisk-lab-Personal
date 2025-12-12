@@ -1,3 +1,6 @@
+/* === Inter Font Import === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 /* ========================================
    PosturoAnalyzer - Global Styles
    Sistema de Análisis de Posturografía
@@ -282,6 +285,3 @@ body {
     padding: 1rem;
   }
 }
-
-/* === Inter Font Import === */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
