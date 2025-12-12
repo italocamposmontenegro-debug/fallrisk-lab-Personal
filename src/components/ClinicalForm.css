@@ -1,0 +1,165 @@
+.clinical-form-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+}
+
+.clinical-form-container h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--gray-900);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.clinical-form-container .subtitle {
+    color: var(--gray-500);
+    margin: 0 0 1.5rem 0;
+    font-size: 0.875rem;
+}
+
+.clinical-form-container h3 {
+    margin: 0 0 1rem 0;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
+.form-group label svg {
+    color: var(--gray-500);
+}
+
+.form-group input[type="number"] {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.2s;
+}
+
+.form-group input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px var(--primary-100);
+}
+
+.number-stepper {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.number-stepper button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    font-size: 1.25rem;
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.number-stepper button:hover {
+    background: var(--gray-100);
+}
+
+.number-stepper button:active {
+    background: var(--gray-200);
+}
+
+.number-stepper span {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    min-width: 40px;
+}
+
+.conditions-section {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+.conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.75rem;
+}
+
+.condition-checkbox {
+    display: block;
+    cursor: pointer;
+}
+
+.condition-checkbox input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-content {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.875rem 1rem;
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+}
+
+.checkbox-content svg {
+    color: var(--gray-400);
+    flex-shrink: 0;
+}
+
+.condition-checkbox:hover .checkbox-content {
+    border-color: var(--gray-300);
+    background: var(--gray-50);
+}
+
+.condition-checkbox.checked .checkbox-content {
+    background: var(--primary-50);
+    border-color: var(--primary-400);
+    color: var(--primary-700);
+}
+
+.condition-checkbox.checked .checkbox-content svg {
+    color: var(--primary-600);
+}
